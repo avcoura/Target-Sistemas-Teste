@@ -1,0 +1,36 @@
+programa
+{
+  //Biblioteca do portugol para acesso aos caracteres da string
+	inclua biblioteca Texto --> t
+	
+	cadeia original
+	cadeia invertida = ""
+	inteiro tamanho, cont, indice
+	caracter i
+	
+	funcao inicio()
+	{
+
+	escreva ("Digite uma string:")
+	leia (original)
+
+  //função de pegar a quantidade de caracteres da string
+	tamanho = t.numero_caracteres(original)
+
+	cont = 0
+	tamanho = tamanho - 1
+	indice = tamanho
+
+  //Iniciado o contador como 0 e o tamanho menor 1 pois a posição da primeira letra é a 0 e passando para o indice esse valor
+	enquanto (cont <= tamanho) {
+
+  //Informa o valor do caracter na posição determinada pelo índice que nesse caso seria a ultima posição
+	i = t.obter_caracter(original, indice)
+	invertida = invertida + i
+	indice --
+	cont ++
+	
+	}
+	escreva (invertida)
+}
+}
