@@ -1,0 +1,32 @@
+programa
+{
+	
+real SP, RJ, MG, ES, Outros, soma, porcentSP, porcentRJ, porcentMG, porcentES, porcentOutros
+	
+	funcao inicio()
+	{
+
+	//valores dos faturamentos para cada estado
+	SP = 67836.43
+	RJ = 36678.66
+	MG = 29229.88
+	ES = 27165.48
+	Outros = 19849.53
+
+	//soma dos faturamentos para se ter 100%
+	soma = SP + RJ + MG + ES + Outros
+
+	//calculo da porcentagem por estado
+	porcentSP = SP * 100 / soma
+	porcentRJ = RJ * 100 / soma
+	porcentMG = MG * 100 / soma
+	porcentES = ES * 100 / soma
+	porcentOutros = Outros * 100 / soma
+
+	escreva ("Porcentagem de SP:" + porcentSP + "\n")
+	escreva ("Porcentagem de RJ:" + porcentRJ + "\n")
+	escreva ("Porcentagem de MG:" + porcentMG + "\n")
+	escreva ("Porcentagem de ES:" + porcentES + "\n")
+	escreva ("Porcentagem de outros estados" + porcentOutros)
+	}
+}
