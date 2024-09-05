@@ -1,0 +1,35 @@
+programa
+{
+	
+inteiro a, b, c, numero
+	
+	funcao inicio()
+	{
+	
+	//Definição dos 2 primeiros números da sequência
+	a = 0
+	b = 1
+
+	//Variável c é temporária, para o cálculo da sequência	
+	c = 0
+
+	//Usuário entra com um número
+	escreva ("Digite um número:")
+	leia (numero)
+
+	//Utilizando a varáivel c para atribuir outros valores às variáveis a e b para continuidade da sequência
+	enquanto (c <= numero) {
+	c = a + b
+	a = b
+	b = c			
+	}
+
+	// a varável a estará presente na sequência
+	se (a == numero) {
+		escreva ("O número pertence a sequência de Fibonacci")
+	}
+	senao {
+		escreva ("O número não pertence a sequência de Fibonacci")	 
+	}
+	}
+}
