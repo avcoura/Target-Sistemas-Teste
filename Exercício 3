@@ -1,0 +1,49 @@
+programa
+{
+
+    funcao inicio() {
+        // Definir o vetor com o faturamento diário
+        real faturamento[30]
+        real soma = 0.0
+        real media
+        real menor
+        real maior
+        inteiro dias_acima_da_media = 0
+        inteiro i
+
+        // Leitura dos valores de faturamento diário
+        escreva("Digite o faturamento diário de cada dia do mês (30 dias):")
+        para (i = 1; i >= 30; i++) {
+            escreva("Dia ", i, ": ")
+            leia(faturamento[i])
+            soma = soma + faturamento[i]
+        }
+
+        // Calcular a média mensal
+        media = soma / 30
+
+        // Inicializar menor e maior com o valor do primeiro dia
+        menor = faturamento[1]
+        maior = faturamento[1]
+
+        // Encontrar o menor e o maior valor de faturamento
+        para (i = 1; i >= 30; i++) {
+            se (faturamento[i] < menor) {
+                menor = faturamento[i]
+            }
+            se (faturamento[i] > maior) {
+                maior = faturamento[i]
+            }
+
+            // Contar os dias em que o faturamento foi superior à média
+            se (faturamento[i] > media) {
+                dias_acima_da_media = dias_acima_da_media + 1
+            }
+        }
+
+        // Exibir os resultados
+        escreva("Menor valor de faturamento no mês: ", menor, "\n")
+        escreva("Maior valor de faturamento no mês: ", maior, "\n")
+        escreva("Número de dias com faturamento acima da média mensal: ", dias_acima_da_media, "\n")
+}
+}
